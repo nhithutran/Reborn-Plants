@@ -5,6 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+conditions = ["healthy", "reasonably-healthy", "has-pests", "leaves-dropping"]
+
+if Condition.count == 0
+	conditions.each do |condition|
+		condition.create(name: condition)
+		puts "created #{condition} condition"
+	end
+end 
+
+sizes = ["small", "medium", "large", "extra-large"]
+
+if Size.count == 0
+	sizes.each do |size|
+		Size.create(name: size)
+		puts "created #{size} size"
+	end
+end 
 
 categories = ["cactus", "succulent", "fern", "indoor", "low-maintenance", "pet-safe", "flowering", "palms"]
 
