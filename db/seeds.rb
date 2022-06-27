@@ -25,11 +25,11 @@
 # 	end
 # end 
 
-categories = ["cactus", "succulent", "fern", "indoor", "low-maintenance", "pet-safe", "flowering", "palms"]
+# categories = ["cactus", "succulent", "air", "indoor", "low-maintenance", "pet-safe", "books", "accessory"]
 
-if Category.count == 0
-	categories.each do |category|
-		Category.create(name: category)
-		puts "created #{category} category"
-	end
-end 
+# if Category.count == 0
+# 	categories.each do |category|
+# 		Category.create(name: category)
+# 		puts "created #{category} category"
+# 	end
+# end 
