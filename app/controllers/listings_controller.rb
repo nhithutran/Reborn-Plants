@@ -68,6 +68,7 @@ class ListingsController < ApplicationController
     def set_form_vars
       @categories = Category.all
       @conditions = Listing.conditions.keys
+      @sizes = Listing.conditions.keys
     end
  
 

@@ -9,4 +9,10 @@ class Listing < ApplicationRecord
     Reasonably_healthy: 3,
     Healthy: 4
   }
+
+  enum size: {
+    Large: 1,
+    Medium: 2,
+    Small: 3,
+  }
 end
