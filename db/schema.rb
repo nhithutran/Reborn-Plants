@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2022_06_25_075822) do
 
   create_table "listings", force: :cascade do |t|
     t.string "name"
-    t.integer "condition"
+    t.text "condition"
     t.string "size"
     t.integer "price"
     t.boolean "sold", default: false
