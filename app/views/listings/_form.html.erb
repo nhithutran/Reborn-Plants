@@ -6,8 +6,8 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :condition, as: :check_box, collection: Listing::CONDITION, wrapper: :vertical_collection_inline %>
-    <%= f.input :size, as: :check_box, collection: Listing::SIZE, wrapper: :vertical_collection_inline %>
+    <%= f.input :condition %>
+    <%= f.input :size %>
     <%= f.input :price %>
     <%= f.association :category %>
     </div>
