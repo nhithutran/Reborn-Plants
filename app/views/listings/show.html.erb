@@ -8,7 +8,15 @@
   <% end %>
 </div>
 
-<%= button_to "Buy plant!", place_order_path %>
+<% if @listing.sold %>
+  <h4>SOLD</h4>
+<% elsif current_user && current_user.id == @listing.user_id %>
+  <h4>This item is already yours.  Are you sure you want to sell it?</h4>
+<% elsif current_user %>
+  <%= button_to "Buy me!", place_order_path %>
+<% else %>
+  <h4>Please log in to make a purchase</h4>
+<% end %>
 
 <p>
   <strong>Name:</strong>
