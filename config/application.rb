@@ -36,3 +36,6 @@ module Rebornplants
     config.generators.system_tests = nil
   end
 end
+
+# add to fix default image error
+# config.serve_static_assets = true

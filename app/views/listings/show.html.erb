@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag @listing.picture, alt: @listing.name %>
-</p>
+<div>
+  <% if @listing.picture.attached? %>
+    <%= image_tag @listing.picture, alt: @listing.name %>
+  <% else %>
+    <%= image_tag "/app/assets/images/image_default.jpg", alt: @listing.name %>
+  <% end %>
+</div>
+
+<%= button_to "Buy plant!", place_order_path %>
 
 <p>
   <strong>Name:</strong>
@@ -37,7 +42,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @listing.user_id %>
+  <%= @listing.user_id%>
 </p>
 
 <p>
