@@ -4,7 +4,7 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :description, as: :rich_text_area %>
+    <%= f.input :description, input_html: { value: 'Enter description here. '} %>
     <%= f.input :condition , collection: ["Need a lot of love", "Brown leaves", "Reasonably healthy", "Healthy", "New"] %>
     <%= f.input :size, collection: ["N/A", "Small", "Medium", "Large"] %>
     <%= f.input :price %>
