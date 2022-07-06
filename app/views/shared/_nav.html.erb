@@ -1,12 +1,27 @@
 <span>
-<%= link_to "Home", root_path %>
-<%= link_to "Listings", listings_path %>
-<span>
-
-<span>
-	<%= link_to "Bought Items", orders_bought_path %>
-	<%= link_to "Sold Items", orders_sold_path %>
-</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Reborn Plants</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+		<%= link_to "Home", root_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+		<%= link_to "Listings", listings_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+		<%= link_to "Bought Items", orders_bought_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+		<%= link_to "Sold Items", orders_sold_path, class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
+</span> 
 
 
 <span style="float: right">
