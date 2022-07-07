@@ -2,16 +2,17 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="display-4">Welcome to Reborn Plants!</h1>
-            <h6>Reborn Plants was founded in June 2020, designed to connect plant lovers in Australia and give pre-loved plants a new home.</h6>
-            <h6>This is for plant owners who want their plant sold to a good home or buyers that have love and time to give.</h6>
+            <h7>Reborn Plants was founded in June 2020, designed to connect plant lovers in Australia and give pre-loved plants a new home.</h7>
+            <h7>This site is for plant owners who want their plant sold to a good home or buyers that have love and time to give.</h7>
             <hr class="my-4">
-            <p>To view</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <%= link_to "Listings", listings_path, class:"btn btn-outline-light btn-lg" %>
+                <%= link_to "Bought Items", orders_bought_path, class:"btn btn-outline-light btn-lg" %>
+                <%= link_to "Sold Items", orders_sold_path, class:"btn btn-outline-light btn-lg" %>
             </p>  
         </div>
 
         <div class="col-md-6">
-            <%=image_tag "home.png", alt: "urban jungle", class: "home-page-image" %>
+            <%=image_tag "home.png", alt: "urban jungle", class: "home-image" %>
         </div>
     </div>    
 </div
