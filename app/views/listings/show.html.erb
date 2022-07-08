@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%# If no picture was uploaded for listing, display default picture %>
 <div> 
   <% if @listing.picture.attached? %>
     <%= image_tag @listing.picture, alt: @listing.name %>

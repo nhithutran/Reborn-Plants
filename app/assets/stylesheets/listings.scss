@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .listing-description{
-    min-height: 50px;
+    max-height: 8rem;
 }
 
+.card-img-top{
+    max-height: 14rem;
+}
+
+// .card-body{
+    
+// }

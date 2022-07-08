@@ -11,16 +11,17 @@
 <div class="row">
   <% @listings.each do |listing| %>
     <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;">
+    <%= image_tag listing.picture, class: "card-img-top img-fluid"%>
       <div class="card-body">
           <h5 class="card-title"><%= listing.name %></h5>
           <p class="card-text" listing-description><%= listing.description %></p>
-          <%= link_to 'Show More', listing, class:"btn btn-outline-success" %>
+          <%= link_to 'Show More', listing, class:"btn btn-outline-success btn-sm" %>
+          <p>
           </p>
-      </div>
-      </div>
-    </div>    
+      </div>    
+    </div> 
+    </div>     
   <% end %> 
 </div>
-
 
