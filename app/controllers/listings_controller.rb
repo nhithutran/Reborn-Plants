@@ -83,10 +83,11 @@ class ListingsController < ApplicationController
     def set_form_vars
       @categories = Category.all
     end
- 
+    
+    # Display alert when listing does not belong to current_user
     def authorize_user
       if @listing.user_id != current_user.id
-        flash[:alert] = "Unauthorised.  This listing belong to someone else!"
+        flash[:alert] = "Unauthorised.  This listing belongs to someone else!"
         redirect_to listings_path
       end
     end

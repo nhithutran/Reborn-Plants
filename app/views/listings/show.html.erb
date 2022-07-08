@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div>
+<%# If no picture was uploaded for listing, display default picture %>
+<div> 
   <% if @listing.picture.attached? %>
     <%= image_tag @listing.picture, alt: @listing.name %>
   <% else %>
@@ -8,6 +9,7 @@
   <% end %>
 </div>
 
+<%# Checks if listing seller user.id matches current_user. Display 'Buy me!' button if it doesn't match %>
 <% if @listing.sold %>
   <h4>SOLD</h4>
 <% elsif current_user && current_user.id == @listing.user_id %>
@@ -58,6 +60,7 @@
   <%= @listing.category_id %>
 </p>
 
+<%# Authorise current_user to Edit if user.id matches with listing.user_id %>
 <% if current_user.id == @listing.user_id %>
   <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <% end %>
