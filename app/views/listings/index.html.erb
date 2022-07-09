@@ -12,11 +12,19 @@
   <% @listings.each do |listing| %>
     <div class="col-md-4">
     <div class="card" style="width: 18rem;">
-    <%= image_tag listing.picture, class: "card-img-top img-fluid"%>
+
+      <div> 
+        <% if listing.picture.attached? %>
+        <%= image_tag listing.picture, class: "card-img-top img-fluid"%>
+      <% else %>
+        <%= image_tag "/app/assets/images/image_default.jpg", alt: @listing.name %>
+        <% end %>
+      </div>
+
       <div class="card-body">
           <h5 class="card-title"><%= listing.name %></h5>
           <p class="card-text" listing-description><%= listing.description %></p>
-          <%= link_to 'Show More', listing, class:"btn btn-outline-success btn-sm" %>
+          <%= link_to 'Show More', listing, class:"btn btn-success btn-sm" %>
           <p>
           </p>
       </div>    

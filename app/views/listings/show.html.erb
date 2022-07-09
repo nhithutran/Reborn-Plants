@@ -61,7 +61,7 @@
 
 <%# Authorise current_user to Edit if user.id matches with listing.user_id %>
 <% if current_user.id == @listing.user_id %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
+  <%= link_to 'Edit', edit_listing_path(@listing), class:"btn btn-success btn-lg"%>
 <% end %>
 
-<%= link_to 'Back', listings_path %>
+<%= link_to 'Back', listings_path, class:"btn btn-outline-success btn-lg" %>
