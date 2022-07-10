@@ -1,14 +1,18 @@
 // Place all the styles related to the Listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Listings page
 .listing-description{
-    min-height: 10rem;
+    max-height: 10rem;
 }
 
 .card-img-top{
     max-height: 14rem;
 }
 
-// .card-body{
-    
-// }
+// Show page
+.show-image-size{
+    max-width: 20rem;
+    max-height: 30rem;
+}
