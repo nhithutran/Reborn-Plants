@@ -14,11 +14,11 @@
     <div class="col-md-4">
     <div class="card" style="width: 18rem;">
 
-      <div> 
+      <div>
         <% if listing.picture.attached? %>
         <%= image_tag listing.picture, class: "card-img-top img-fluid"%>
       <% else %>
-        <%= image_tag "/app/assets/images/image_default.jpg", alt: listing.name %>
+        <%= image_tag "default_image.png", alt: listing.name, class: "card-img-top img-fluid" %>
         <% end %>
       </div>
 
