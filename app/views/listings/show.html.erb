@@ -4,7 +4,7 @@
   <% if @listing.picture.attached? %>
     <%= image_tag @listing.picture, alt: @listing.name, class:"show-image-size" %>
   <% else %>
-    <%= image_tag "/app/assets/images/image_default.jpg", alt: @listing.name, class:"show-image-size" %>
+    <%= image_tag "./app/assets/images/image_default.jpg", alt: @listing.name, class:"show-image-size" %>
   <% end %>
 </div>
 

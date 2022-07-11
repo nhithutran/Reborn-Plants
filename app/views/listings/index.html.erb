@@ -29,7 +29,7 @@
             <h6>SOLD</h6>
           <% end %>
           <%= link_to 'Show More', listing, class:"btn btn-success btn-sm" %>
-            <% if current_user.id == listing.user_id %>
+            <% if current_user && current_user.id == listing.user_id %>
               <%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-outline-warning btn-sm" %></td>
               <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-dark btn-sm" %></td>
             <% end %>
