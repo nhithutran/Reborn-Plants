@@ -15,6 +15,7 @@
     <div class="card" style="width: 18rem;">
 
       <div>
+        <%# Display default_image if no image is uploaded %>
         <% if listing.picture.attached? %>
         <%= image_tag listing.picture, class: "card-img-top img-fluid"%>
       <% else %>
@@ -28,6 +29,7 @@
           <% if listing.sold %>
             <h6>SOLD</h6>
           <% end %>
+          <%# Only display Edit or Delete button if listing.user_id matches current_user.id %>
           <%= link_to 'Show More', listing, class:"btn btn-success btn-sm" %>
             <% if current_user && current_user.id == listing.user_id %>
               <%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-outline-warning btn-sm" %></td>

@@ -15,18 +15,9 @@
 # 		puts "created #{condition} condition"
 # 	end
 # end 
-
-# sizes = ["small", "medium", "large", "extra-large"]
-
-# if Size.count == 0
-# 	sizes.each do |size|
-# 		Size.create(name: size)
-# 		puts "created #{size} size"
-# 	end
-# end 
-
 categories = ["Succulent & Cacti", "Air plants ", "Sun Lovers ", "Indoor plants", "Low Maintenance", "Pet Friendly", "Trailing & Hanging", "Accessory & Books" ]
 
+# Create each category listed in categories array above if there is no category in the db
 if Category.count == 0
 	categories.each do |category|
 		Category.create(name: category)
